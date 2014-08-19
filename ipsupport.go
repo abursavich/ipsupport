@@ -12,11 +12,12 @@ import "net"
 // OK returns a version of the IP that the platform supports.
 // If it is not supported it returns nil.
 func OK(ip net.IP) net.IP {
-	v4 := ip.To4()
-	if supportsIPv4 && v4 != nil {
-		return v4
+	if supportsIPv4 {
+		if v4 := ip.To4(); v4 != nil {
+			return v4
+		}
 	}
-	if supportsIPv6 && len(ip) == net.IPv6len && v4 == nil {
+	if supportsIPv6 && len(ip) == net.IPv6len {
 		return ip
 	}
 	return nil
