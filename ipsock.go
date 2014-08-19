@@ -5,7 +5,7 @@
 // Internet protocol family sockets
 
 // Package ipsupport exposes features of the platform's networking
-// functionality using code extraced from the standard library's
+// functionality using code extracted from the standard library's
 // net package.
 package ipsupport
 
