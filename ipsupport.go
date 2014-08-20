@@ -5,6 +5,8 @@
 // Package ipsupport exposes features of the platform's networking
 // functionality using code extracted from the standard library's
 // net package.
+//
+// See: https://godoc.org/github.com/abursavich/nett
 package ipsupport
 
 import "net"
